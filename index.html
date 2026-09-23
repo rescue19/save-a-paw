@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Save a Paw — Bitcoin Donations</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f6f2ea;color:#222}.hero{padding:72px 22px;text-align:center;background:linear-gradient(135deg,#fff,#eee7d8)}.paw{font-size:54px}h1{font-size:46px;margin:8px 0 14px}p{font-size:18px;line-height:1.65;color:#4b4b4b}.wrap{max-width:900px;margin:auto;padding:30px 20px 70px}.card{background:white;border-radius:22px;padding:28px;margin:20px 0;box-shadow:0 8px 30px #0001}.btn{display:inline-block;background:#222;color:#fff;text-decoration:none;padding:15px 24px;border-radius:12px;font-weight:700;margin-top:12px}.btc{background:#f4f1eb;border-radius:14px;padding:17px;word-break:break-all;font-family:monospace;font-size:15px;border:1px solid #ddd}.copy{border:0;border-radius:10px;padding:12px 18px;margin-top:12px;cursor:pointer;font-weight:700}.small{font-size:14px;color:#777}.steps{display:grid;gap:12px}.step{padding:15px;border-radius:12px;background:#faf8f3}.footer{text-align:center;padding:30px;color:#777;font-size:14px}
+</style></head>
+<body>
+<header class="hero"><div class="paw">🐾</div><h1>Save a Paw</h1><p>Help those who have no home.<br>Every donation can mean food, shelter, or veterinary care.</p><a class="btn" href="#donate">❤️ Donate with Bitcoin</a></header>
+<main class="wrap">
+<section class="card"><h2>Why are we doing this?</h2><p>Funds are intended to help abandoned and homeless animals with food, basic care, veterinary expenses, and temporary shelter.</p></section>
+<section class="card" id="donate"><h2>₿ Bitcoin Donation</h2><p>Send Bitcoin to the following address:</p><div class="btc" id="addr">bc1qaa5tw6p9yhlcpyfe08mtzqwjuzw80rfz0q3c3d</div><button class="copy" onclick="navigator.clipboard.writeText(document.getElementById('addr').innerText);this.innerText='✓ Copied'">Copy Address</button><p class="small">Check the address before sending. Bitcoin transactions cannot easily be reversed.</p></section>
+<section class="card"><h2>How can you help?</h2><div class="steps"><div class="step">1️⃣ Copy the BTC address.</div><div class="step">2️⃣ Open your Bitcoin wallet.</div><div class="step">3️⃣ Enter the address and amount.</div><div class="step">4️⃣ Check the address one more time and send.</div></div></section>
+<section class="card"><h2>🐶🐱 Transparency</h2><p>This page can include photos of the animals, stories about each case, and public reports showing donations and expenses.</p></section>
+<section class="card" style="text-align:center"><h2>📱 Scan to Donate</h2><img alt="Bitcoin donation QR code" style="width:220px;max-width:100%;border-radius:14px" src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=bitcoin%3Abc1qaa5tw6p9yhlcpyfe08mtzqwjuzw80rfz0q3c3d"><p class="small">Scan with a Bitcoin wallet to donate.</p></section>
+<section class="card"><h2>📸 The Animals We Help</h2><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px"><img alt="Rescued dog" style="width:100%;height:180px;object-fit:cover;border-radius:16px" src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=600&q=80"><img alt="Rescued cat" style="width:100%;height:180px;object-fit:cover;border-radius:16px" src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?auto=format&fit=crop&w=600&q=80"></div><p class="small">Replace these demo photos with real rescue stories.</p></section>
+<section class="card"><h2>📩 Contact</h2><p>For rescue stories, partnerships, or donation questions, contact the project team.</p><p><a href="mailto:YOUR-EMAIL@example.com">YOUR-EMAIL@example.com</a></p><p class="small">Replace the demo email with your real contact address.</p></section>
+</main><div class="footer">© 2026 Save a Paw · Initiative to help homeless animals</div>
+</body></html>
