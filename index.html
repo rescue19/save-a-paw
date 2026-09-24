@@ -1,23 +1,94 @@
 <!doctype html>
 <html lang="en">
-<head> 
-  <meta name="google-site-verification" content="P80i7OmaxJ7Tl8fllAovTFkZCRiZcC216SRSQ16i4lA" />
-  ...
-</head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Save a Paw — Bitcoin Donations</title>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Save a Paw — helping injured and abandoned animals receive veterinary care, treatment, food and a safer future.">
+<meta name="keywords" content="Save a Paw, animal rescue, dog rescue, animal donations, Bitcoin donations, help animals">
+<title>Save a Paw — Give Them a Second Chance</title>
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f6f2ea;color:#222}.hero{padding:72px 22px;text-align:center;background:linear-gradient(135deg,#fff,#eee7d8)}.paw{font-size:54px}h1{font-size:46px;margin:8px 0 14px}p{font-size:18px;line-height:1.65;color:#4b4b4b}.wrap{max-width:900px;margin:auto;padding:30px 20px 70px}.card{background:white;border-radius:22px;padding:28px;margin:20px 0;box-shadow:0 8px 30px #0001}.btn{display:inline-block;background:#222;color:#fff;text-decoration:none;padding:15px 24px;border-radius:12px;font-weight:700;margin-top:12px}.btc{background:#f4f1eb;border-radius:14px;padding:17px;word-break:break-all;font-family:monospace;font-size:15px;border:1px solid #ddd}.copy{border:0;border-radius:10px;padding:12px 18px;margin-top:12px;cursor:pointer;font-weight:700}.small{font-size:14px;color:#777}.steps{display:grid;gap:12px}.step{padding:15px;border-radius:12px;background:#faf8f3}.footer{text-align:center;padding:30px;color:#777;font-size:14px}
-</style></head>
+:root{--ink:#18231d;--muted:#657269;--cream:#f8f5ed;--green:#315b43;--orange:#d98245;--white:#fff;--line:#e7e2d8}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+a{color:inherit}.container{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(248,245,237,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{height:70px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-weight:900;font-size:1.25rem}.logo span{color:var(--orange)}
+nav a{text-decoration:none;margin-left:22px;font-weight:700;font-size:.95rem}
+.hero{padding:78px 0 54px;background:radial-gradient(circle at 80% 10%,#e9dfc9 0,transparent 35%)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center}
+.badge{display:inline-flex;background:#e8efe9;color:var(--green);padding:8px 13px;border-radius:999px;font-weight:800;font-size:.85rem}
+h1{font-size:clamp(2.5rem,6vw,5.1rem);line-height:.98;margin:18px 0 22px;letter-spacing:-.05em}
+.lead{font-size:1.15rem;color:var(--muted);max-width:620px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-block;text-decoration:none;padding:13px 20px;border-radius:12px;font-weight:850}
+.btn-primary{background:var(--green);color:white}.btn-secondary{border:1px solid #cfc8b9;background:white}
+.hero-card{position:relative;background:white;padding:12px;border-radius:28px;box-shadow:0 24px 70px rgba(30,45,34,.12);transform:rotate(1.2deg)}
+.hero-card img{width:100%;height:500px;object-fit:cover;border-radius:20px;display:block}
+.hero-caption{position:absolute;left:28px;bottom:28px;background:rgba(255,255,255,.94);padding:12px 16px;border-radius:14px;font-weight:800}
+section{padding:76px 0}.section-head{max-width:720px;margin-bottom:30px}
+.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:.78rem;font-weight:900;color:var(--orange)}
+h2{font-size:clamp(2rem,4vw,3.2rem);line-height:1.05;margin:8px 0 14px;letter-spacing:-.035em}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:white;border:1px solid var(--line);border-radius:22px;overflow:hidden}
+.card img{width:100%;height:250px;object-fit:cover;display:block}.card-body{padding:22px}
+.card h3{margin:0 0 8px;font-size:1.3rem}.muted{color:var(--muted)}
+.story{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}
+.story img{width:100%;height:100%;min-height:390px;object-fit:cover;border-radius:24px}
+.story-copy{background:var(--green);color:white;border-radius:24px;padding:36px}
+.story-copy .eyebrow{color:#ffd0aa}
+.donate{background:#17251d;color:white;border-radius:30px;padding:46px}
+.donate-grid{display:grid;grid-template-columns:1fr 360px;gap:35px;align-items:center}
+.address{margin-top:20px;background:#0d1711;border:1px solid #405246;border-radius:15px;padding:16px;word-break:break-all;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:#eaf4ec}
+.qr-wrap{background:white;padding:18px;border-radius:20px;text-align:center;color:var(--ink)}.qr{width:100%;max-width:280px;display:block;margin:auto}
+.copy-btn{border:0;cursor:pointer;margin-top:12px;background:#f0b37a;color:#2b1a0e;padding:11px 15px;border-radius:10px;font-weight:900}
+.note{font-size:.9rem;color:#c4d0c7}footer{padding:32px 0;border-top:1px solid var(--line);color:var(--muted)}
+@media(max-width:800px){.hero-grid,.story,.donate-grid{grid-template-columns:1fr}nav{display:none}.hero-card img{height:390px}.grid3{grid-template-columns:1fr}.donate{padding:28px}}
+</style>
+</head>
 <body>
-<header class="hero"><div class="paw">🐾</div><h1>Save a Paw</h1><p>Help those who have no home.<br>Every donation can mean food, shelter, or veterinary care.</p><a class="btn" href="#donate">❤️ Donate with Bitcoin</a></header>
-<main class="wrap">
-<section class="card"><h2>Why are we doing this?</h2><p>Funds are intended to help abandoned and homeless animals with food, basic care, veterinary expenses, and temporary shelter.</p></section>
-<section class="card" id="donate"><h2>₿ Bitcoin Donation</h2><p>Send Bitcoin to the following address:</p><div class="btc" id="addr">bc1qaa5tw6p9yhlcpyfe08mtzqwjuzw80rfz0q3c3d</div><button class="copy" onclick="navigator.clipboard.writeText(document.getElementById('addr').innerText);this.innerText='✓ Copied'">Copy Address</button><p class="small">Check the address before sending. Bitcoin transactions cannot easily be reversed.</p></section>
-<section class="card"><h2>How can you help?</h2><div class="steps"><div class="step">1️⃣ Copy the BTC address.</div><div class="step">2️⃣ Open your Bitcoin wallet.</div><div class="step">3️⃣ Enter the address and amount.</div><div class="step">4️⃣ Check the address one more time and send.</div></div></section>
-<section class="card"><h2>🐶🐱 Transparency</h2><p>This page can include photos of the animals, stories about each case, and public reports showing donations and expenses.</p></section>
-<section class="card" style="text-align:center"><h2>📱 Scan to Donate</h2><img alt="Bitcoin donation QR code" style="width:220px;max-width:100%;border-radius:14px" src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=bitcoin%3Abc1qaa5tw6p9yhlcpyfe08mtzqwjuzw80rfz0q3c3d"><p class="small">Scan with a Bitcoin wallet to donate.</p></section>
-<section class="card"><h2>📸 The Animals We Help</h2><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px"><img alt="Rescued dog" style="width:100%;height:180px;object-fit:cover;border-radius:16px" src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=600&q=80"><img alt="Rescued cat" style="width:100%;height:180px;object-fit:cover;border-radius:16px" src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?auto=format&fit=crop&w=600&q=80"></div><p class="small">Replace these demo photos with real rescue stories.</p></section>
-<section class="card"><h2>📩 Contact</h2><p>For rescue stories, partnerships, or donation questions, contact the project team.</p><p><a href="mailto:YOUR-EMAIL@example.com">YOUR-EMAIL@example.com</a></p><p class="small">Replace the demo email with your real contact address.</p></section>
-</main><div class="footer">© 2026 Save a Paw · Initiative to help homeless animals</div>
+<header><div class="container nav">
+<div class="logo">🐾 Save <span>a Paw</span></div>
+<nav><a href="#stories">Stories</a><a href="#help">How We Help</a><a href="#donate">Donate</a></nav>
+</div></header>
+
+<main>
+<section class="hero"><div class="container hero-grid"><div>
+<div class="badge">🐾 For animals who need a helping hand</div>
+<h1>One paw.<br>One chance.<br>One life.</h1>
+<p class="lead">Save a Paw is a community initiative dedicated to helping injured and abandoned animals receive veterinary care, treatment, food and a safer future.</p>
+<div class="buttons"><a class="btn btn-primary" href="#donate">❤️ Donate with Bitcoin</a><a class="btn btn-secondary" href="#stories">Read their stories</a></div>
+</div><div class="hero-card"><img src="wolf-injury.jpg" alt="Injured dog receiving veterinary care"><div class="hero-caption">From pain toward a second chance ❤️</div></div>
+</div></section>
+
+<section id="stories"><div class="container"><div class="section-head">
+<div class="eyebrow">Real stories</div><h2>Help can begin with one small act.</h2>
+<p class="muted">These photographs are from real cases shared for this campaign.</p></div>
+<div class="grid3">
+<article class="card"><img src="wolf-injury.jpg" alt="Dog with a serious injury"><div class="card-body"><h3>Injured in a wolf attack</h3><p class="muted">This dog was injured in a wolf attack and needed urgent veterinary care and treatment for its wounds.</p></div></article>
+<article class="card"><img src="rescue-transport.jpg" alt="Injured dog being transported"><div class="card-body"><h3>On the way to help</h3><p class="muted">After the injury, the animal was transported so it could receive the medical care and continued treatment it needed.</p></div></article>
+<article class="card"><img src="throat-problem.jpg" alt="Dog with a health problem"><div class="card-body"><h3>A throat problem</h3><p class="muted">This little dog also needs attention and veterinary care because of a throat-related health problem.</p></div></article>
+</div></div></section>
+
+<section id="help"><div class="container story"><img src="rescue-transport.jpg" alt="Rescue and transport of an injured dog"><div class="story-copy">
+<div class="eyebrow">Your support</div><h2>Donations mean care, treatment and time.</h2>
+<p>Campaign funds can help cover veterinary examinations, treatment of injuries, medicines, food and essential rescue-related needs.</p>
+<p>Every contribution, no matter the size, can become part of an animal's journey toward a safer life.</p>
+</div></div></section>
+
+<section id="donate"><div class="container"><div class="donate"><div class="donate-grid"><div>
+<div class="eyebrow">Bitcoin donations</div><h2>Help with Bitcoin 🐾</h2>
+<p>Send BTC directly to the address below. Before sending, always verify the address in your Bitcoin wallet.</p>
+<div class="address" id="btc">bc1qaa5tw6p9yhlcpyfe08mtzqwjuzw80rfz0q3c3d</div><button class="copy-btn" onclick="copyBTC()">Copy Bitcoin address</button><p class="note" id="copyStatus"></p>
+</div><div class="qr-wrap"><img class="qr" src="btc-qr.png" alt="Bitcoin donation QR code"><strong>Scan to donate</strong></div></div></div></div></section>
+</main>
+
+<footer><div class="container"><strong>Save a Paw</strong> · With love for animals 🐾</div></footer>
+<script>
+function copyBTC(){
+ const address=document.getElementById('btc').innerText.trim();
+ navigator.clipboard.writeText(address).then(()=>document.getElementById('copyStatus').textContent='Bitcoin address copied.')
+ .catch(()=>document.getElementById('copyStatus').textContent='Copy failed — please select the address manually.');
+}
+</script>
 </body></html>
